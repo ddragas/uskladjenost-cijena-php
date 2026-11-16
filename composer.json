@@ -1,9 +1,9 @@
 {
     "name": "infomedia/uskladjenost-cijena-php",
-    "description": "PHP SDK for the Usklađenost cijena API (uskladjenost-cijena.com): anchor prices and public price lists under NN 101/2026.",
+    "description": "PHP SDK for the Usklađenost cijena API (uskladjenost-cijena.com): base prices and public price lists under NN 132/2026.",
     "type": "library",
     "license": "MIT",
-    "keywords": ["uskladjenost-cijena", "sidrena-cijena", "cjenik", "nn-101-2026", "price-compliance", "croatia"],
+    "keywords": ["uskladjenost-cijena", "bazna-cijena", "cjenik", "nn-132-2026", "price-compliance", "croatia"],
     "require": {
         "php": ">=8.1",
         "ext-json": "*",

@@ -1,6 +1,6 @@
 # Usklađenost cijena – PHP SDK
 
-PHP klijent za API servisa [Usklađenost cijena](https://uskladjenost-cijena.com): sidrene cijene i javni strojno čitljiv cjenik po NN 101/2026. Pokriva cijeli API: trgovce, lokacije i kanale, katalog, cijene, odluke o usklađenosti, objave cjenika, uvoz datoteka i webhookove, uz provjeru potpisa webhook isporuka.
+PHP klijent za API servisa [Usklađenost cijena](https://uskladjenost-cijena.com): bazne cijene i javni strojno čitljiv cjenik po NN 132/2026. Pokriva cijeli API: trgovce, lokacije i kanale, katalog, cijene, odluke o usklađenosti, objave cjenika, uvoz datoteka i webhookove, uz provjeru potpisa webhook isporuka.
 
 ```bash
 composer require infomedia/uskladjenost-cijena-php
@@ -32,7 +32,7 @@ $api->prices()->recordByExternal('SKU-1', [
 
 // 3. Što ispisati uz cijenu (compliance:read).
 $decision = $api->compliance()->byExternal('SKU-1', ['location_code' => 'PU-01']);
-echo $decision['data']['anchor_display']['label']; // "Cijena na dan 10. 9. 2026.: 12,50 €" ili null
+echo $decision['data']['base_price']['label']; // "Bazna cijena na dan 10. 9. 2026.: 12,50 €" ili null
 ```
 
 ## Sve metode

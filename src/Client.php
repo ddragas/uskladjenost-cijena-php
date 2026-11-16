@@ -24,7 +24,7 @@ use UskladjenostCijena\Resources\Webhooks;
  *   $item = $api->items()->upsert('SKU-1', ['merchant_id' => $m, 'kind' => 'product', 'name' => 'Deterdžent']);
  *   $api->prices()->recordByExternal('SKU-1', ['regular_price_minor' => 1250]);
  *   $decision = $api->compliance()->byExternal('SKU-1');
- *   echo $decision['anchor_display']['label'];
+ *   echo $decision['base_price']['label'];
  *
  * Every method returns the decoded JSON body (an array) plus `_status`, the HTTP
  * status; every refusal is an

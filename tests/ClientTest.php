@@ -97,7 +97,7 @@ final class ClientTest extends TestCase
 
     public function test_compliance_publications_imports_and_webhooks(): void
     {
-        $this->answer(200, ['data' => ['anchor_display' => ['label' => 'Cijena na dan 10. 9. 2026.: 22,00 €']]]);
+        $this->answer(200, ['data' => ['anchor_display' => ['label' => 'Bazna cijena na dan 10. 9. 2026.: 22,00 €']]]);
         $this->assertStringContainsString('22,00', $this->api->compliance()->byExternal('SKU-1', ['location_code' => 'PU-01', 'locale' => 'hr'])['data']['anchor_display']['label']);
         $this->assertSame('/api/v1/compliance/by-external/SKU-1', $this->last()->getUri()->getPath());
         $this->assertSame('location_code=PU-01&locale=hr', $this->last()->getUri()->getQuery());
